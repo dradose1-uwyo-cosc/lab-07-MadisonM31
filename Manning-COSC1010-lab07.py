@@ -54,20 +54,23 @@ print("*"*75)
 # The sum should start at 0 
 
 num_sum = 0 
+isNeg = False
 
 adding = True
 
 while adding: 
     number = input("Please enter a number, or exit")
     if number[0] == "-":
-        number.replace("-", " ")
-        number.lstrip()
-        if number.isdigit() == True:
-            number = int(number)
-            num_sum = num_sum - number
-    elif number.isdigit() == True:
+        number = number.replace("-", "")
+        isNeg = True
+    else:
+        isNeg = False
+    if number.isdigit() == True:
         number = int(number)
-        num_sum = num_sum + number
+        if isNeg == True:
+            num_sum = num_sum - number
+        else:
+            num_sum = num_sum + number
     elif number.lower() == "exit":
         adding = False
     else: print(f"Please enter a numeric value")
