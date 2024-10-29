@@ -1,12 +1,10 @@
-# Your Name Here
+# Madison Manning
 # UWYO COSC 1010
-# Submission Date
-# Lab XX
-# Lab Section: 
+# 10/29/2024
+# Lab 07
+# Lab Section: 10
 # Sources, people worked with, help given to: 
-# your
-# comments
-# here
+
 
 
 # Prompt the user for an upper bound 
@@ -18,6 +16,24 @@
 # You will continue to prompt the user until a proper integer value is entered
 
 factorial = 1
+count = 1
+
+upper_bound = input("Please enter a number")
+active = False
+
+if upper_bound.isdigit() == True:
+    upper_bound = int(upper_bound)
+    active = True 
+else: 
+    print(f"Please enter a numeric value")
+
+while active: 
+    factorial = factorial * count
+    count += 1
+    if count > upper_bound:
+        active = False
+
+    
 
 print(f"The result of the factorial based on the given bound is {factorial}")
 
@@ -39,6 +55,23 @@ print("*"*75)
 
 num_sum = 0 
 
+adding = True
+
+while adding: 
+    number = input("Please enter a number, or exit")
+    if number[0] == "-":
+        number.replace("-", " ")
+        number.lstrip()
+        if number.isdigit() == True:
+            number = int(number)
+            num_sum = num_sum - number
+    elif number.isdigit() == True:
+        number = int(number)
+        num_sum = num_sum + number
+    elif number.lower() == "exit":
+        adding = False
+    else: print(f"Please enter a numeric value")
+    
 print(f"Your final sum is {num_sum}")
 
 print("*"*75)
