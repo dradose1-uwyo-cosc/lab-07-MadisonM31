@@ -3,7 +3,7 @@
 # 10/29/2024
 # Lab 07
 # Lab Section: 10
-# Sources, people worked with, help given to: 
+# Sources, people worked with, help given to: Thank you to my COSC 1010 notes, Eric and Paige
 
 
 
@@ -95,4 +95,12 @@ print("*"*75)
 # Print the result of the equation
 # Again, loop through prompting the user for input until `exit` in any casing is input 
 
-        
+def calculator(equation):
+    if "+" in equation:
+        numbers = equation.split(+)
+        if numbers[0].isdigit == True and numbers[1].isdigit == True:
+            number_1 = int(numbers[0])
+            number_2 = int(numbers[1])
+            
+        product = number_1 + number_2
+    elif "-" 
