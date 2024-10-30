@@ -97,10 +97,42 @@ print("*"*75)
 
 def calculator(equation):
     if "+" in equation:
-        numbers = equation.split(+)
+        numbers = equation.split("+")
         if numbers[0].isdigit == True and numbers[1].isdigit == True:
             number_1 = int(numbers[0])
             number_2 = int(numbers[1])
-            
-        product = number_1 + number_2
-    elif "-" 
+            total = number_1 + number_2
+        else:
+            print(f"Please enter a numeric value")
+    elif "-" in equation:
+        numbers = equation.split("-")
+        if numbers[0].isdigit == True and numbers[1].isdigit == True:
+            number_1 = int(numbers[0])
+            number_2 = int(numbers[1])
+            total = number_1 - number_2
+        else:
+            print(f"Please enter a numeric value")
+    elif "/" in equation:
+        numbers = equation.split("/")
+        if numbers[0].isdigit == True and numbers[1].isdigit == True:
+            number_1 = int(numbers[0])
+            number_2 = int(numbers[1])
+            total = number_1 / number_2
+        else:
+            print(f"Please enter a numeric value")
+    elif "*" in equation:
+        numbers = equation.split("*")
+        if numbers[0].isdigit == True and numbers[1].isdigit == True:
+            number_1 = int(numbers[0])
+            number_2 = int(numbers[1])
+            total = number_1 * number_2
+        else:
+            print(f"Please enter a numeric value")
+    elif "%" in equation:
+        numbers = equation.split("%")
+        if numbers[0].isdigit == True and numbers[1].isdigit == True:
+            number_1 = int(numbers[0])
+            number_2 = int(numbers[1])
+            total = number_1 % number_2
+        else:
+            print(f"Please enter a numeric value")
