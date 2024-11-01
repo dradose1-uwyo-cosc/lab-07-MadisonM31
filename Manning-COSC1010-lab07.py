@@ -97,46 +97,56 @@ print("*"*75)
 
 
 
-def calculator(equation):
+def calculator():
+    equation = input("Please type in an equation, type exit to exit")
+
+    if equation.upper() == "EXIT":
+        return False
+
     if "+" in equation:
         numbers = equation.split("+")
-        if numbers[0].isdigit == True and numbers[1].isdigit == True:
+        if numbers[0].isdigit() == True and numbers[1].isdigit() == True:
             number_1 = int(numbers[0])
             number_2 = int(numbers[1])
-            print({number_1} + {number_2})
+            print(number_1 + number_2)
         else:
             print(f"Please enter a numeric value")
     elif "-" in equation:
         numbers = equation.split("-")
-        if numbers[0].isdigit == True and numbers[1].isdigit == True:
+        if numbers[0].isdigit() == True and numbers[1].isdigit() == True:
             number_1 = int(numbers[0])
             number_2 = int(numbers[1])
-            print({number_1} - {number_2})
+            print(number_1 - number_2)
         else:
             print(f"Please enter a numeric value")
     elif "/" in equation:
         numbers = equation.split("/")
-        if numbers[0].isdigit == True and numbers[1].isdigit == True:
+        if numbers[0].isdigit() == True and numbers[1].isdigit() == True:
             number_1 = int(numbers[0])
             number_2 = int(numbers[1])
-            print({number_1} / {number_2})
+            print(number_1 / number_2)
         else:
             print(f"Please enter a numeric value")
     elif "*" in equation:
         numbers = equation.split("*")
-        if numbers[0].isdigit == True and numbers[1].isdigit == True:
+        if numbers[0].isdigit() == True and numbers[1].isdigit() == True:
             number_1 = int(numbers[0])
             number_2 = int(numbers[1])
-            print({number_1} * {number_2})
+            print(number_1 * number_2)
         else:
             print(f"Please enter a numeric value")
     elif "%" in equation:
         numbers = equation.split("%")
-        if numbers[0].isdigit == True and numbers[1].isdigit == True:
+        if numbers[0].isdigit() == True and numbers[1].isdigit() == True:
             number_1 = int(numbers[0])
             number_2 = int(numbers[1])
-            print({number_1} % {number_2})
+            print(number_1 % number_2)
         else:
             print(f"Please enter a numeric value")
+    return True
+    
+while True:
+    calc = calculator()
+    if calc == False:
+        break
 
-calculator(input())
