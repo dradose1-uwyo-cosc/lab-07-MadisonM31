@@ -95,13 +95,15 @@ print("*"*75)
 # Print the result of the equation
 # Again, loop through prompting the user for input until `exit` in any casing is input 
 
+
+
 def calculator(equation):
     if "+" in equation:
         numbers = equation.split("+")
         if numbers[0].isdigit == True and numbers[1].isdigit == True:
             number_1 = int(numbers[0])
             number_2 = int(numbers[1])
-            total = number_1 + number_2
+            print({number_1} + {number_2})
         else:
             print(f"Please enter a numeric value")
     elif "-" in equation:
@@ -109,7 +111,7 @@ def calculator(equation):
         if numbers[0].isdigit == True and numbers[1].isdigit == True:
             number_1 = int(numbers[0])
             number_2 = int(numbers[1])
-            total = number_1 - number_2
+            print({number_1} - {number_2})
         else:
             print(f"Please enter a numeric value")
     elif "/" in equation:
@@ -117,7 +119,7 @@ def calculator(equation):
         if numbers[0].isdigit == True and numbers[1].isdigit == True:
             number_1 = int(numbers[0])
             number_2 = int(numbers[1])
-            total = number_1 / number_2
+            print({number_1} / {number_2})
         else:
             print(f"Please enter a numeric value")
     elif "*" in equation:
@@ -125,7 +127,7 @@ def calculator(equation):
         if numbers[0].isdigit == True and numbers[1].isdigit == True:
             number_1 = int(numbers[0])
             number_2 = int(numbers[1])
-            total = number_1 * number_2
+            print({number_1} * {number_2})
         else:
             print(f"Please enter a numeric value")
     elif "%" in equation:
@@ -133,6 +135,8 @@ def calculator(equation):
         if numbers[0].isdigit == True and numbers[1].isdigit == True:
             number_1 = int(numbers[0])
             number_2 = int(numbers[1])
-            total = number_1 % number_2
+            print({number_1} % {number_2})
         else:
             print(f"Please enter a numeric value")
+
+calculator(input())
